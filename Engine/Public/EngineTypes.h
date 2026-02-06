@@ -29,6 +29,11 @@ struct exVector2
 		return *this;
 	}
 
+	bool operator==(const exVector2& OtherVector)
+	{
+		return x == OtherVector.x && y == OtherVector.y;
+	}
+
 	exVector2 operator-=(const exVector2& OtherVector)
 	{
 		x -= OtherVector.x;

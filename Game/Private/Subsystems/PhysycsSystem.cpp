@@ -11,15 +11,15 @@ PhysicsEngine::~PhysicsEngine() {
 
 void PhysicsEngine::AddPhysicsComponent(std::weak_ptr<PhysicsComponent> componentToAdd)
 {
-	mPhysicsComponent.emplace_back(componentToAdd);
+	mPhysicsComponents.emplace_back(componentToAdd);
 }
 
 void PhysicsEngine::ClearInvalidPhysicscomponent()
 {
-	if (mPhysicsComponent.empty()) {
+	if (mPhysicsComponents.empty()) {
 		return;
 	}
-	mPhysicsComponent.remove_if(
+	mPhysicsComponents.remove_if(
 
 		[](const std::weak_ptr<PhysicsComponent>& component) {
 			return component.expired();
@@ -30,16 +30,16 @@ void PhysicsEngine::ClearInvalidPhysicscomponent()
 void PhysicsEngine::PhysicsUpdate(const float DeltaTime)
 {
 	ClearInvalidPhysicscomponent();
-	for (size_t index1 = 0; index1 < mPhysicsComponent.size(); ++index1) {
-		auto firstPhysicsComponentIt = mPhysicsComponent.begin();
+	for (size_t index1 = 0; index1 < mPhysicsComponents.size(); ++index1) {
+		auto firstPhysicsComponentIt = mPhysicsComponents.begin();
 		std::advance(firstPhysicsComponentIt, index1);
 
 		if (!firstPhysicsComponentIt->expired())
 		{
 			std::shared_ptr<PhysicsComponent> firstPhysicsComponentToCheck = firstPhysicsComponentIt->lock();
-			for (size_t index2 = index1+1; index2 < mPhysicsComponent.size(); ++index2) 
+			for (size_t index2 = index1+1; index2 < mPhysicsComponents.size(); ++index2) 
 			{
-				auto secondPhysicsComponentIt = mPhysicsComponent.begin();
+				auto secondPhysicsComponentIt = mPhysicsComponents.begin();
 				std::advance(secondPhysicsComponentIt, index2);
 
 				if (!secondPhysicsComponentIt->expired()) {
@@ -51,6 +51,8 @@ void PhysicsEngine::PhysicsUpdate(const float DeltaTime)
 
 						firstPhysicsComponentToCheck->CollisionResolution();
 						secondPhysicsComponenttoCheck->CollisionResolution();
+
+						secondPhysicsComponenttoCheck->DoPhysics();
 					}
 				}
 			}

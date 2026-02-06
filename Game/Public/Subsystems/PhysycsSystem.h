@@ -32,5 +32,5 @@ private:
 
 	static std::unique_ptr<PhysicsEngine> sPhysicsEngine;
 
-	std::list<std::weak_ptr<PhysicsComponent>> mPhysicsComponent;
+	std::list<std::weak_ptr<PhysicsComponent>> mPhysicsComponents;
 };

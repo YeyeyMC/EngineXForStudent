@@ -14,6 +14,7 @@
 #include "Game/Public/Actors/Ball.h"
 #include "Game/Public/ComponentTypes.h"
 #include "Game/Public/Subsystems/PhysycsSystem.h"
+#include "Game/Public/Subsystems/RenderingSystem.h"
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
@@ -53,9 +54,7 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 	float squareWidth = 200.0f;
 
 	float radius = 50.0f;
-	exVector2 Center;
-	Center.x = 300.0f;
-	Center.y = 400.0f;
+	float radius2 = 25.0f;
 
 	exColor Color;
 	Color.mColor[0] = 255;
@@ -69,14 +68,30 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 	Color2.mColor[2] = 255;
 	Color2.mColor[3] = 255;
 
-	mBall = std::make_shared<Ball>(radius, Color);
-	mBall->BeginPlay();
-	mBall->AddComponentOfType<Component>();
-	mBall->AddComponentOfType<TransformComponent>(Center);
+	exColor Color3;
+	Color3.mColor[0] = 255;
+	Color3.mColor[1] = 150;
+	Color3.mColor[2] = 0;
+	Color3.mColor[3] = 255;
 
-	mSquare = std::make_shared<Square>(squareHeight, squareWidth, Color2);
+	mBall = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 200.f), radius, Color);
+
+	mBall_Second = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 0.0f), radius2, Color2);
+
+	if (std::shared_ptr<PhysicsComponent> BallPhysicsformComp = mBall_Second->GetComponentOfType<PhysicsComponent>())
+	{
+		BallPhysicsformComp->SetVelocity(exVector2(0.0f, 0.5f));
+	}
+
+	/*mBall = std::make_shared<Ball>(radius, Color);
+	mBall->BeginPlay();*/
+
+	/*mBall_Second = std::make_shared<Ball>(radius2, Color3);
+	mBall_Second->BeginPlay();*/
+
+	/*mSquare = std::make_shared<Square>(squareHeight, squareWidth, Color2);
 	mSquare->BeginPlay();
-	mSquare->AddComponentOfType<Component>();
+	mSquare->AddComponentOfType<Component>();*/
 }
 
 //-----------------------------------------------------------------
@@ -122,10 +137,15 @@ void MyGame::OnEventsConsumed()
 void MyGame::Run( float fDeltaT )
 {
 	//mBall->Render(mEngine);
-	if (std::shared_ptr<RenderComponent> RenderComp = mBall->GetComponentOfType<RenderComponent>())
-	{
-		RenderComp->Render(mEngine);
-	}
+	//if (std::shared_ptr<RenderComponent> RenderComp = mBall->GetComponentOfType<RenderComponent>())
+	//{
+	//	RenderComp->Render(mEngine);
+	//}
+	mBall->Tick(fDeltaT);
+	//if (std::shared_ptr<RenderComponent> RenderComp = mBall_Second->GetComponentOfType<RenderComponent>())
+	//{
+	//	RenderComp->Render(mEngine);
+	//}
 	mBall->Tick(fDeltaT);
 	/*if (std::shared_ptr<RenderComponent> RenderComp = mSquare->GetComponentOfType<RenderComponent>())
 	{
@@ -147,4 +167,5 @@ void MyGame::Run( float fDeltaT )
 		BallPhysicsformComp->SetVelocity(BallVelocity);
 	}
 	PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);
+	RENDER_ENGINE.RenderUpdate(mEngine);
 }
