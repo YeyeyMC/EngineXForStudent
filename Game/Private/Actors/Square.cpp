@@ -12,6 +12,8 @@ Square::Square(float Height, float Width, exColor BallColor)
 
 void Square::BeginPlay()
 {
+	Actor::BeginPlay();
+
 	AddComponentOfType<TransformComponent>(exVector2{ 500.0f, 500.0f });
 	AddComponentOfType<SquareRenderComponent>(mColor, mWidth, mHeight);
 }

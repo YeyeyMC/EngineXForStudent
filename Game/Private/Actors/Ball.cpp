@@ -13,6 +13,8 @@ Ball::Ball(float BallRadius, exColor BallColor)
 
 void Ball::BeginPlay()
 {
+	Actor::BeginPlay();
+
 	AddComponentOfType<CircleRenderComponent>(mColor, mRadius);
 	std::tuple<std::shared_ptr<CircleColliderComponent>, bool, String> ResultCircleCollider = AddComponentOfType<CircleColliderComponent>(mRadius+5.0);
 

@@ -15,6 +15,7 @@
 #include "Game/Public/ComponentTypes.h"
 #include "Game/Public/Subsystems/PhysycsSystem.h"
 #include "Game/Public/Subsystems/RenderingSystem.h"
+#include "Game/Public/Subsystems/TickSystem.h"
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
@@ -141,12 +142,12 @@ void MyGame::Run( float fDeltaT )
 	//{
 	//	RenderComp->Render(mEngine);
 	//}
-	mBall->Tick(fDeltaT);
+	//mBall->Tick(fDeltaT);
 	//if (std::shared_ptr<RenderComponent> RenderComp = mBall_Second->GetComponentOfType<RenderComponent>())
 	//{
 	//	RenderComp->Render(mEngine);
 	//}
-	mBall->Tick(fDeltaT);
+	//mBall_Second->Tick(fDeltaT);
 	/*if (std::shared_ptr<RenderComponent> RenderComp = mSquare->GetComponentOfType<RenderComponent>())
 	{
 		RenderComp->Render(mEngine);
@@ -155,8 +156,7 @@ void MyGame::Run( float fDeltaT )
 
 	if (mUp)
 	{
-		BallVelocity.y = -2.5f;
-				
+		BallVelocity.y = -2.5f;	
 	}
 	if (mDown)
 	{
@@ -168,4 +168,5 @@ void MyGame::Run( float fDeltaT )
 	}
 	PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);
 	RENDER_ENGINE.RenderUpdate(mEngine);
+	TICK_ENGINE.TickUpdate(fDeltaT);
 }
