@@ -12,11 +12,11 @@
 
 #include <vector>
 #include "Game/Public/Actors/Player.h"
-#include "Game/Public/Actors/Ball.h"
 #include "Game/Public/ComponentTypes.h"
 #include "Game/Public/Subsystems/PhysycsSystem.h"
 #include "Game/Public/Subsystems/RenderingSystem.h"
 #include "Game/Public/Subsystems/TickSystem.h"
+
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
@@ -28,8 +28,6 @@ const char* gWindowName = "PG29 Yeison, Felipe, Vinicius";
 MyGame::MyGame()
 	: mEngine( nullptr )
 	, mFontID( -1 )
-	, mLeft( false )
-	, mRight( false )
 {
 }
 
@@ -94,11 +92,7 @@ void MyGame::OnEvent( SDL_Event* pEvent )
 
 void MyGame::OnEventsConsumed()
 {
-	int nKeys = 0;
-	const Uint8 *pState = SDL_GetKeyboardState( &nKeys );
-
-	mLeft = pState[SDL_SCANCODE_LEFT] || pState[SDL_SCANCODE_A];
-	mRight = pState[SDL_SCANCODE_RIGHT] || pState[SDL_SCANCODE_D];
+	mInputSystem.Update();
 }
 
 //-----------------------------------------------------------------
@@ -106,17 +100,23 @@ void MyGame::OnEventsConsumed()
 
 void MyGame::Run( float fDeltaT )
 {
-	if (mLeft && !mRight)
+	if (mInputSystem.IsMovingLeft() && !mInputSystem.IsMovingRight())
 	{
 		mPlayer->MoveLeft();
 	}
-	else if (mRight && !mLeft)
+	else if (mInputSystem.IsMovingRight() && !mInputSystem.IsMovingLeft())
 	{
 		mPlayer->MoveRight();
 	}
 	else
 	{
 		mPlayer->StopMoving();
+	}
+
+	// @TODO: Implement shoot when IsShootingPressed() returns true
+	if (mInputSystem.IsShootingPressed())
+	{
+		
 	}
 
 	PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);

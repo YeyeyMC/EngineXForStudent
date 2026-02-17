@@ -10,9 +10,9 @@
 #include "Game/Public/Utils.h"
 #include "Game/Public/GameInterface.h"
 #include "Engine/Public/EngineTypes.h"
-#include "Game/Public/Actors/Ball.h"
-#include "Game/Public/Actors/Square.h"
 #include "Game/Public/Actors/Player.h"
+#include "Game/Public/Actors/Square.h"
+#include "Game/Public/InputSystem.h"
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -39,6 +39,8 @@ private:
 	exEngineInterface*			mEngine;
 
 	int							mFontID;
+
+	InputSystem					mInputSystem;
 
 	bool						mLeft;
 	bool						mRight;
