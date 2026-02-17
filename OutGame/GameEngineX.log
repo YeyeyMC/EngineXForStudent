@@ -1,9 +1,12 @@
-﻿  Ball.cpp
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Public\Actor.h(49,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  (compiling source file 'Game/Private/Actors/Ball.cpp')
-      C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Public\Actor.h(49,69):
+﻿  Player.cpp
+C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Game/Private/Actors/Player.cpp')
+      C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69):
       the template instantiation context (the oldest one first) is
-          C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Actors\Ball.cpp(19,92):
+          C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Player.cpp(25,92):
           see reference to function template instantiation 'std::tuple<std::shared_ptr<CircleColliderComponent>,bool,String> Actor::AddComponentOfType<CircleColliderComponent,double>(double)' being compiled
   
-  GameEngineX.vcxproj -> C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Build\GameEngineXd.exe
+  Game.cpp
+  Main.cpp
+  Generating Code...
+  GameEngineX.vcxproj -> C:\Users\Public\Repos\EngineXForStudent\Build\GameEngineXd.exe

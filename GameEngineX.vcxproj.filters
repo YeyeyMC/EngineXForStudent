@@ -51,6 +51,7 @@
     <ClInclude Include="Game\Public\Components\CircleColliderComponent.h" />
     <ClInclude Include="Game\Public\Subsystems\RenderingSystem.h" />
     <ClInclude Include="Game\Public\Subsystems\TickSystem.h" />
+    <ClInclude Include="Game\Public\Actors\Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Private\Main.cpp">
@@ -96,6 +97,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game\Private\Subsystems\TickSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Private\Actors\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
