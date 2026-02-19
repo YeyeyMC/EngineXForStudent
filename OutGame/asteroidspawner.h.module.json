@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OutGame\\AsteroidSpawner.h.obj",
+            "outputs": [
+                "C:\\Users\\yeyey\\Documents\\GitHub\\EngineXForStudent\\OutGame\\vc143.pdb",
+                "OutGame\\",
+                "C:\\Users\\yeyey\\Documents\\GitHub\\EngineXForStudent\\OutGame\\AsteroidSpawner.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Game\\Public\\Actors\\AsteroidSpawner.h",
+                    "source-path": "c:\\users\\yeyey\\documents\\github\\enginexforstudent\\game\\public\\actors\\asteroidspawner.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
