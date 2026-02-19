@@ -1,0 +1,37 @@
+﻿  Actor.cpp
+  Ball.cpp
+C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Game/Private/Actors/Ball.cpp')
+      C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Ball.cpp(19,92):
+          see reference to function template instantiation 'std::tuple<std::shared_ptr<CircleColliderComponent>,bool,String> Actor::AddComponentOfType<CircleColliderComponent,double>(double)' being compiled
+  
+  Player.cpp
+C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Game/Private/Actors/Player.cpp')
+      C:\Users\Public\Repos\EngineXForStudent\Game\Public\Actor.h(49,69):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Player.cpp(25,92):
+          see reference to function template instantiation 'std::tuple<std::shared_ptr<CircleColliderComponent>,bool,String> Actor::AddComponentOfType<CircleColliderComponent,double>(double)' being compiled
+  
+  Square.cpp
+  Component.cpp
+  CircleColliderComponent.cpp
+  SquareRenderComponent.cpp
+  Game.cpp
+  Main.cpp
+  TransformComponent.cpp
+  RenderComponent.cpp
+  CircleRenderComponent.cpp
+  PhysicsComponent.cpp
+  PhysycsSystem.cpp
+  RenderingSystem.cpp
+  TickSystem.cpp
+  InputSystem.cpp
+  Generating Code...
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\CircleColliderComponent.cpp(49,1): warning C4715: 'CircleColliderComponent::IsCollisionDetected': not all control paths return a value
+EngineXd.lib(Engine.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(Engine.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+EngineXd.lib(RenderPacket.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(RenderPacket.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+EngineXd.lib(System.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(System.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+  GameEngineX.vcxproj -> C:\Users\Public\Repos\EngineXForStudent\Build\GameEngineXd.exe

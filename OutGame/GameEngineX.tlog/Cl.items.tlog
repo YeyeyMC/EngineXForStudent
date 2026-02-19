@@ -1,0 +1,17 @@
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actor.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Actor.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Ball.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Ball.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Player.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Player.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Actors\Square.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Square.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Component.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Component.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\CircleColliderComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\CircleColliderComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\SquareRenderComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\SquareRenderComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Game.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Game.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Main.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\Main.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\TransformComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\TransformComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\RenderComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\RenderComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\CircleRenderComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\CircleRenderComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Components\PhysicsComponent.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\PhysicsComponent.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Subsystems\PhysycsSystem.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\PhysycsSystem.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Subsystems\RenderingSystem.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\RenderingSystem.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\Subsystems\TickSystem.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\TickSystem.obj
+C:\Users\Public\Repos\EngineXForStudent\Game\Private\InputSystem.cpp;C:\Users\Public\Repos\EngineXForStudent\OutGame\InputSystem.obj
