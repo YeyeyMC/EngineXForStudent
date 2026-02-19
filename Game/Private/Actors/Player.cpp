@@ -4,6 +4,7 @@
 #include "Game/Public/Components/CircleColliderComponent.h"
 #include "Game/Public/Components/PhysicsComponent.h"
 #include "Game/Public/Utils.h"
+#include "Game/Public/Components/BulletSpawnerComponent.h"
 
 Player::Player(float PlayerRadius, exColor PlayerColor)
 	: mSpeed(2.0f)
@@ -17,6 +18,9 @@ Player::Player(float PlayerRadius, exColor PlayerColor)
 void Player::BeginPlay()
 {
 	Actor::BeginPlay();
+
+	//Adds bullet spawner component
+	AddComponentOfType<BulletSpawnerComponent>(2.0f, 2.0f);
 
 	// Adds the Circle Render Component to the player
 	AddComponentOfType<CircleRenderComponent>(mColor, mRadius);

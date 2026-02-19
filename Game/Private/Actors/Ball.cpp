@@ -5,8 +5,6 @@
 #include "Game/Public/Utils.h"
 
 
-#include "Game/Public/Components/BulletSpawnerComponent.h"
-
 Ball::Ball(float BallRadius, exColor BallColor)
 {
 	mRadius = BallRadius;
@@ -17,8 +15,7 @@ Ball::Ball(float BallRadius, exColor BallColor)
 void Ball::BeginPlay()
 {
 	Actor::BeginPlay();
-
-	AddComponentOfType<BulletSpawnerComponent>(2.0f, 2.0f);
+		
 	AddComponentOfType<CircleRenderComponent>(mColor, mRadius);
 	std::tuple<std::shared_ptr<CircleColliderComponent>, bool, String> ResultCircleCollider = AddComponentOfType<CircleColliderComponent>(mRadius+5.0);
 
