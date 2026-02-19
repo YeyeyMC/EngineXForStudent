@@ -10,8 +10,9 @@
 #include "Game/Public/Utils.h"
 #include "Game/Public/GameInterface.h"
 #include "Engine/Public/EngineTypes.h"
-#include "Game/Public/Actors/Ball.h"
+#include "Game/Public/Actors/Player.h"
 #include "Game/Public/Actors/Square.h"
+#include "Game/Public/InputSystem.h"
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -39,11 +40,11 @@ private:
 
 	int							mFontID;
 
-	bool						mUp;
-	bool						mDown;
+	InputSystem					mInputSystem;
+
+	bool						mLeft;
+	bool						mRight;
 
 	exVector2					mTextPosition;
-	std::shared_ptr<Ball>       mBall;
-	std::shared_ptr<Ball>       mBall_Second;
-	std::shared_ptr<Square>     mSquare;
+	std::shared_ptr<Player>        mPlayer;
 };
