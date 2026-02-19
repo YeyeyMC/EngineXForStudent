@@ -20,7 +20,7 @@ void Player::BeginPlay()
 	Actor::BeginPlay();
 
 	//Adds bullet spawner component
-	AddComponentOfType<BulletSpawnerComponent>(2.0f, 2.0f);
+	AddComponentOfType<BulletSpawnerComponent>(0.5f, 10.0f);
 
 	// Adds the Circle Render Component to the player
 	AddComponentOfType<CircleRenderComponent>(mColor, mRadius);

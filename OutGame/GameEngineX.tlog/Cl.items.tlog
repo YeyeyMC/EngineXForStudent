@@ -3,6 +3,7 @@ C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\A
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Actors\Player.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\Player.obj
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Actors\Square.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\Square.obj
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Component.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\Component.obj
+C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Components\BulletSpawnerComponent.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\BulletSpawnerComponent.obj
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Components\CircleColliderComponent.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\CircleColliderComponent.obj
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Components\SquareRenderComponent.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\SquareRenderComponent.obj
 C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Game.cpp;C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\OutGame\Game.obj
