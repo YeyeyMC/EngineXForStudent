@@ -1,2 +1,5 @@
-﻿  BulletSpawnerComponent.cpp
+﻿  LINK : no se encontró Build\GameEngineXd.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+EngineXd.lib(Engine.obj) : warning LNK4099: no se encontró PDB 'EngineX.pdb' con 'EngineXd.lib(Engine.obj)' o en 'C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\EngineX.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+EngineXd.lib(RenderPacket.obj) : warning LNK4099: no se encontró PDB '' con 'EngineXd.lib(RenderPacket.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+EngineXd.lib(System.obj) : warning LNK4099: no se encontró PDB 'EngineX.pdb' con 'EngineXd.lib(System.obj)' o en 'C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\EngineX.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
   GameEngineX.vcxproj -> C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\GameEngineXd.exe
