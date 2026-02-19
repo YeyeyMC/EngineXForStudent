@@ -147,6 +147,7 @@
     <ClInclude Include="Engine\Public\EngineInterface.h" />
     <ClInclude Include="Engine\Public\EngineTypes.h" />
     <ClInclude Include="Engine\Public\SDL.h" />
+    <ClInclude Include="Game\Public\Actors\Asteroid.h" />
     <ClInclude Include="Game\Public\Actors\Ball.h" />
     <ClInclude Include="Game\Public\Actors\Square.h" />
     <ClInclude Include="Game\Public\Component.h" />
@@ -167,6 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Private\Actor.cpp" />
+    <ClCompile Include="Game\Private\Actors\Asteroid.cpp" />
+    <ClCompile Include="Game\Private\Actors\AsteroidSpawner.cpp" />
     <ClCompile Include="Game\Private\Actors\Ball.cpp" />
     <ClCompile Include="Game\Private\Actors\Square.cpp" />
     <ClCompile Include="Game\Private\Component.cpp" />
@@ -181,6 +184,7 @@
     <ClCompile Include="Game\Private\Subsystems\PhysycsSystem.cpp" />
     <ClCompile Include="Game\Private\Subsystems\RenderingSystem.cpp" />
     <ClCompile Include="Game\Private\Subsystems\TickSystem.cpp" />
+    <ClCompile Include="Game\Public\Actors\AsteroidSpawner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

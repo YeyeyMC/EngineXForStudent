@@ -12,6 +12,7 @@
 #include "Engine/Public/EngineTypes.h"
 #include "Game/Public/Actors/Ball.h"
 #include "Game/Public/Actors/Square.h"
+#include "Game/Public/Actors/AsteroidSpawner.h"
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -46,4 +47,5 @@ private:
 	std::shared_ptr<Ball>       mBall;
 	std::shared_ptr<Ball>       mBall_Second;
 	std::shared_ptr<Square>     mSquare;
+	std::shared_ptr<AsteroidSpawner> mAsteroidSpawner;
 };

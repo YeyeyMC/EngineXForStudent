@@ -16,6 +16,7 @@
 #include "Game/Public/Subsystems/PhysycsSystem.h"
 #include "Game/Public/Subsystems/RenderingSystem.h"
 #include "Game/Public/Subsystems/TickSystem.h"
+#include "Game/Public/Actors/AsteroidSpawner.h"
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
@@ -75,14 +76,16 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 	Color3.mColor[2] = 0;
 	Color3.mColor[3] = 255;
 
-	mBall = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 200.f), radius, Color);
+	//mBall = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 200.f), radius, Color);
 
-	mBall_Second = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 0.0f), radius2, Color2);
+	//mBall_Second = Actor::SpawnActorOfType<Ball>(exVector2(200.0f, 0.0f), radius2, Color2);
 
-	if (std::shared_ptr<PhysicsComponent> BallPhysicsformComp = mBall_Second->GetComponentOfType<PhysicsComponent>())
+	/*if (std::shared_ptr<PhysicsComponent> BallPhysicsformComp = mBall_Second->GetComponentOfType<PhysicsComponent>())
 	{
 		BallPhysicsformComp->SetVelocity(exVector2(0.0f, 0.5f));
-	}
+	}*/
+
+	mAsteroidSpawner = Actor::SpawnActorOfType<AsteroidSpawner>(exVector2(0.0f, 0.0f), 0.7f, 14, 20.0f, 780.0f, -60.0f);
 
 	/*mBall = std::make_shared<Ball>(radius, Color);
 	mBall->BeginPlay();*/
@@ -154,7 +157,7 @@ void MyGame::Run( float fDeltaT )
 	}*/
 	exVector2 BallVelocity(0.0f, 0.0f);
 
-	if (mUp)
+	/*if (mUp)
 	{
 		BallVelocity.y = -2.5f;	
 	}
@@ -165,7 +168,7 @@ void MyGame::Run( float fDeltaT )
 	if (std::shared_ptr<PhysicsComponent> BallPhysicsformComp = mBall->GetComponentOfType<PhysicsComponent>())
 	{
 		BallPhysicsformComp->SetVelocity(BallVelocity);
-	}
+	}*/
 	PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);
 	RENDER_ENGINE.RenderUpdate(mEngine);
 	TICK_ENGINE.TickUpdate(fDeltaT);

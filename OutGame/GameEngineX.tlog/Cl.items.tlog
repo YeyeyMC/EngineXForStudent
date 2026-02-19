@@ -1,15 +1,18 @@
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Actor.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Actor.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Actors\Ball.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Ball.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Actors\Square.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Square.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Component.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Component.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\CircleColliderComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\CircleColliderComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\SquareRenderComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\SquareRenderComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Game.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Game.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Main.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\Main.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\TransformComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\TransformComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\RenderComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\RenderComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\CircleRenderComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\CircleRenderComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Components\PhysicsComponent.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\PhysicsComponent.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Subsystems\PhysycsSystem.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\PhysycsSystem.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Subsystems\RenderingSystem.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\RenderingSystem.obj
-C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\Game\Private\Subsystems\TickSystem.cpp;C:\Users\pg29yeison\Downloads\EngineXForStudent (1)\EngineXForStudent\OutGame\TickSystem.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Actor.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Actor.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Actors\Asteroid.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Asteroid.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Actors\AsteroidSpawner.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\AsteroidSpawner.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Actors\Ball.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Ball.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Actors\Square.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Square.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Component.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Component.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\CircleColliderComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\CircleColliderComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\SquareRenderComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\SquareRenderComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Game.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Game.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Main.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\Main.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\TransformComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\TransformComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\RenderComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\RenderComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\CircleRenderComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\CircleRenderComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Components\PhysicsComponent.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\PhysicsComponent.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Subsystems\PhysycsSystem.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\PhysycsSystem.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Subsystems\RenderingSystem.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\RenderingSystem.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Private\Subsystems\TickSystem.cpp;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\TickSystem.obj
+C:\Users\yeyey\Documents\GitHub\EngineXForStudent\Game\Public\Actors\AsteroidSpawner.h;C:\Users\yeyey\Documents\GitHub\EngineXForStudent\OutGame\AsteroidSpawner.h.obj
