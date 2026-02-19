@@ -13,6 +13,7 @@
 #include "Game/Public/Actors/Player.h"
 #include "Game/Public/Actors/Square.h"
 #include "Game/Public/InputSystem.h"
+#include "Game/Public/Actors/AsteroidSpawner.h"
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -47,4 +48,5 @@ private:
 
 	exVector2					mTextPosition;
 	std::shared_ptr<Player>        mPlayer;
+	std::shared_ptr<AsteroidSpawner> mAsteroidSpawner;
 };

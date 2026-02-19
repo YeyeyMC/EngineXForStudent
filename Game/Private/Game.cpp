@@ -16,6 +16,7 @@
 #include "Game/Public/Subsystems/PhysycsSystem.h"
 #include "Game/Public/Subsystems/RenderingSystem.h"
 #include "Game/Public/Subsystems/TickSystem.h"
+#include "Game/Public/Actors/AsteroidSpawner.h"
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -60,6 +61,8 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 	
 	exVector2 PlayerStartPosition(350.0f, 550.0f);
 	mPlayer = Actor::SpawnActorOfType<Player>(PlayerStartPosition, playerRadius, PlayerColor);
+
+	mAsteroidSpawner = Actor::SpawnActorOfType<AsteroidSpawner>(exVector2(0.0f, 0.0f), 0.7f, 14, 20.0f, 780.0f, -60.0f);
 }
 
 //-----------------------------------------------------------------
