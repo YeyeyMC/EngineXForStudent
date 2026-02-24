@@ -11,7 +11,6 @@
 #include "Engine/Public/SDL.h"
 
 #include <vector>
-#include "Game/Public/Actors/Player.h"
 #include "Game/Public/ComponentTypes.h"
 #include "Game/Public/Subsystems/PhysycsSystem.h"
 #include "Game/Public/Subsystems/RenderingSystem.h"
@@ -60,6 +59,8 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 	
 	exVector2 PlayerStartPosition(350.0f, 550.0f);
 	mPlayer = Actor::SpawnActorOfType<Player>(PlayerStartPosition, playerRadius, PlayerColor);
+
+	mScore = Actor::SpawnActorOfType<Score>(exVector2(50.0f, 50.0f), mFontID);
 }
 
 //-----------------------------------------------------------------

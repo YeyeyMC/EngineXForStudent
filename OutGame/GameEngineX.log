@@ -1,5 +1,5 @@
-﻿  LINK : no se encontró Build\GameEngineXd.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
-EngineXd.lib(Engine.obj) : warning LNK4099: no se encontró PDB 'EngineX.pdb' con 'EngineXd.lib(Engine.obj)' o en 'C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\EngineX.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-EngineXd.lib(RenderPacket.obj) : warning LNK4099: no se encontró PDB '' con 'EngineXd.lib(RenderPacket.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
-EngineXd.lib(System.obj) : warning LNK4099: no se encontró PDB 'EngineX.pdb' con 'EngineXd.lib(System.obj)' o en 'C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\EngineX.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-  GameEngineX.vcxproj -> C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\GameEngineXd.exe
+﻿  TextComponent.cpp
+EngineXd.lib(Engine.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(Engine.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+EngineXd.lib(RenderPacket.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(RenderPacket.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+EngineXd.lib(System.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(System.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
+  GameEngineX.vcxproj -> C:\Users\Public\Repos\EngineXForStudent\Build\GameEngineXd.exe

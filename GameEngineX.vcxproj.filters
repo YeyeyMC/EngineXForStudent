@@ -54,6 +54,8 @@
     <ClInclude Include="Game\Public\Actors\Player.h" />
     <ClInclude Include="Game\Public\InputSystem.h" />
     <ClInclude Include="Game\Public\Components\BulletSpawnerComponent.h" />
+    <ClInclude Include="Game\Public\Actors\Score.h" />
+    <ClInclude Include="Game\Public\Components\TextComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Private\Main.cpp">
@@ -108,6 +110,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game\Private\Components\BulletSpawnerComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Private\Actors\Score.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Private\Components\TextComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

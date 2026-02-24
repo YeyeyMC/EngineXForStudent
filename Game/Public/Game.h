@@ -12,6 +12,7 @@
 #include "Engine/Public/EngineTypes.h"
 #include "Game/Public/Actors/Player.h"
 #include "Game/Public/Actors/Square.h"
+#include "Game/Public/Actors/Score.h"
 #include "Game/Public/InputSystem.h"
 
 //-----------------------------------------------------------------
@@ -47,4 +48,5 @@ private:
 
 	exVector2					mTextPosition;
 	std::shared_ptr<Player>        mPlayer;
+	std::shared_ptr<Score>    mScore;
 };
