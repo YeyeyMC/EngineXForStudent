@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "OutGame\\AsteroidSpawner.obj",
+            "outputs": [
+                "OutGame\\AsteroidSpawner.h_D84138299C6B2A5E.ifc.dt.module.json",
+                "OutGame\\AsteroidSpawner.h_D84138299C6B2A5E.ifc.dt.d.json",
+                "OutGame\\AsteroidSpawner.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\yeyey\\Documents\\GitHub\\EngineXForStudent\\Game\\Public\\Actors\\AsteroidSpawner.h",
+                    "source-path": "c:\\users\\yeyey\\documents\\github\\enginexforstudent\\game\\public\\actors\\asteroidspawner.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

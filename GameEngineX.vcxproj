@@ -147,6 +147,8 @@
     <ClInclude Include="Engine\Public\EngineInterface.h" />
     <ClInclude Include="Engine\Public\EngineTypes.h" />
     <ClInclude Include="Engine\Public\SDL.h" />
+    <ClInclude Include="Game\Public\Actors\Asteroid.h" />
+    <ClInclude Include="Game\Public\Actors\AsteroidSpawner.h" />
     <ClInclude Include="Game\Public\Actors\Ball.h" />
     <ClInclude Include="Game\Public\Actors\Player.h" />
     <ClInclude Include="Game\Public\Actors\Score.h" />
@@ -172,6 +174,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game\Private\Actor.cpp" />
+    <ClCompile Include="Game\Private\Actors\Asteroid.cpp" />
+    <ClCompile Include="Game\Private\Actors\AsteroidSpawner.cpp" />
     <ClCompile Include="Game\Private\Actors\Ball.cpp" />
     <ClCompile Include="Game\Private\Actors\Player.cpp" />
     <ClCompile Include="Game\Private\Actors\Score.cpp" />
