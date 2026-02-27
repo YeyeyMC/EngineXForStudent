@@ -11,7 +11,7 @@ public:
 	PhysicsComponent() = delete;
 
 	PhysicsComponent(std::weak_ptr<Actor> owner, exVector2 velocity = { 0.0f, 0.0f }, 
-					bool isStatic = false, bool isGravityEnabled = false);
+					bool isStatic = false, bool isGravityEnabled = false, bool isTrigger = false, String layer = "");
 
 	virtual void BeginPlay() override;
 	virtual void Tick(const float DeltaTime) override;
@@ -28,9 +28,17 @@ public:
 	exVector2 GetVelocity() const;
 	void SetVelocity(exVector2 inVelocity);
 
+	bool IsTrigger() const;
+	void SetIsTrigger(bool value);
+
+	String GetLayer() const;
+	void SetLayer(String layer);
+
 private:
 	unsigned int mIsStatic : 1;
 	unsigned int mIsGravityEnabled : 1;
+	bool mIsTrigger = false;
+	String mLayer;
 	exVector2 mVelocity;
 	std::list<CollisionEventSignature> mCollisionEvents;
 

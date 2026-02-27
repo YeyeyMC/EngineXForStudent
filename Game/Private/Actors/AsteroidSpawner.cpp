@@ -23,6 +23,21 @@ void AsteroidSpawner::Tick(const float DeltaSeconds)
 {
     Actor::Tick(DeltaSeconds);
 
+    // 1) CLEANUP bounds
+    mSpawned.erase(
+        std::remove_if(mSpawned.begin(), mSpawned.end(),
+            [this](const std::shared_ptr<Asteroid>& a)
+            {
+                if (!a) return true;
+
+                if (a->IsDead()) return true;
+
+                exVector2 p = a->GetComponentOfType<TransformComponent>()->GetLocation();
+
+                return (p.x < mKillMinX || p.x > mKillMaxX || p.y < mKillMinY || p.y > mKillMaxY);
+            }),
+        mSpawned.end());
+
     if ((int)mSpawned.size() >= mMaxAlive) return;
 
     mTimer += DeltaSeconds;

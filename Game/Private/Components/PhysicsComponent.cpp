@@ -4,8 +4,9 @@
 #include "Game/Public/Actor.h"
 
 PhysicsComponent::PhysicsComponent(std::weak_ptr<Actor> owner, exVector2 velocity, 
-                                    bool isStatic, bool isGravityEnabled): Component(owner), 
-                                    mVelocity(velocity), mIsStatic(isStatic), mIsGravityEnabled(isGravityEnabled)
+                                    bool isStatic, bool isGravityEnabled, bool isTrigger, String layer): Component(owner), 
+                                    mVelocity(velocity), mIsStatic(isStatic), mIsGravityEnabled(isGravityEnabled),
+                                    mIsTrigger(isTrigger), mLayer(layer)
 {
 }
 
@@ -76,4 +77,24 @@ exVector2 PhysicsComponent::GetVelocity() const
 void PhysicsComponent::SetVelocity(exVector2 inVelocity)
 {
     mVelocity = inVelocity;
+}
+
+bool PhysicsComponent::IsTrigger() const
+{
+    return mIsTrigger;
+}
+
+void PhysicsComponent::SetIsTrigger(bool value)
+{
+    mIsTrigger = value;
+}
+
+String PhysicsComponent::GetLayer() const
+{
+    return mLayer;
+}
+
+void PhysicsComponent::SetLayer(String layer)
+{
+    mLayer = layer;
 }

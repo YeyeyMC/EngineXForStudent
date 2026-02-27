@@ -44,6 +44,9 @@ void PhysicsEngine::PhysicsUpdate(const float DeltaTime)
 
 				if (!secondPhysicsComponentIt->expired()) {
 					std::shared_ptr<PhysicsComponent> secondPhysicsComponenttoCheck = secondPhysicsComponentIt->lock();
+
+					if (!ShouldCollide(firstPhysicsComponentToCheck->GetLayer(), secondPhysicsComponenttoCheck->GetLayer())) continue;
+
 					if (firstPhysicsComponentToCheck->IsCollisionDetected(*secondPhysicsComponentIt)) {
 						
 						firstPhysicsComponentToCheck->BroadcastCollisionEvents(secondPhysicsComponenttoCheck->GetOwner(), {0.0f,0.0f});
@@ -52,7 +55,7 @@ void PhysicsEngine::PhysicsUpdate(const float DeltaTime)
 						firstPhysicsComponentToCheck->CollisionResolution();
 						secondPhysicsComponenttoCheck->CollisionResolution();
 
-						secondPhysicsComponenttoCheck->DoPhysics();
+						//secondPhysicsComponenttoCheck->DoPhysics();
 					}
 				}
 			}
@@ -60,6 +63,12 @@ void PhysicsEngine::PhysicsUpdate(const float DeltaTime)
 			firstPhysicsComponentToCheck->DoPhysics();
 		}
 	}
+}
+
+bool PhysicsEngine::ShouldCollide(const std::string& a, const std::string& b)
+{
+	if ((a == "Bullet" && b == "Player") || (a == "Player" && b == "Bullet")) return false;
+	return true;
 }
 
 PhysicsEngine::PhysicsEngine() {

@@ -5,8 +5,10 @@
 CircleColliderComponent::CircleColliderComponent(std::weak_ptr<Actor> owner, float radius, 
 												exVector2 velocity, 
 												bool isStatic, 
-												bool isGravityEnabled) : 
-												PhysicsComponent(owner, velocity, isStatic, isGravityEnabled), 
+												bool isGravityEnabled,
+												bool isTrigger,
+												String layer) : 
+												PhysicsComponent(owner, velocity, isStatic, isGravityEnabled, isTrigger, layer), 
 												mRadius(radius)
 {
 
@@ -50,9 +52,16 @@ bool CircleColliderComponent::IsCollisionDetected(std::weak_ptr<PhysicsComponent
 
 void CircleColliderComponent::CollisionResolution()
 {
-	exVector2 CurrentVelocity = GetVelocity();
-	exVector2 ResolvedVelocity = CurrentVelocity * -1.0f;
-	SetVelocity(ResolvedVelocity);
+	if (!IsTrigger())
+	{
+		exVector2 CurrentVelocity = GetVelocity();
+		exVector2 ResolvedVelocity = CurrentVelocity * -1.0f;
+		SetVelocity(ResolvedVelocity);
+	}
+	else
+	{
+		return;
+	}
 }
 
 float CircleColliderComponent::GetRadius() const

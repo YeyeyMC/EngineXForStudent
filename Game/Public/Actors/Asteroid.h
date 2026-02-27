@@ -15,7 +15,7 @@ public:
 private:
     void OnCollision(std::weak_ptr<Actor> other, const exVector2 hitLocation);
 
-private:
     float   mRadius;
     exColor mColor;
+    bool mDead;
 };

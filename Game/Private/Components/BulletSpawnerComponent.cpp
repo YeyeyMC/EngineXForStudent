@@ -30,6 +30,7 @@ void BulletSpawnerComponent::Tick(const float DeltaTime)
 		if (const std::shared_ptr<TransformComponent> TransformComp = mOwner.lock()->GetComponentOfType<TransformComponent>()) 
 		{		
 			std::shared_ptr<Ball> newBullet = Actor::SpawnActorOfType<Ball>(exVector2(TransformComp->GetLocation().x, TransformComp->GetLocation().y - 50), bulletRadius, Color);
+			//newBullet->GetComponentOfType<PhysicsComponent>()->SetLayer("Bullet");
 			if (std::shared_ptr<PhysicsComponent> BulletPhysicsformComp = newBullet->GetComponentOfType<PhysicsComponent>())
 			{
 				BulletPhysicsformComp->SetVelocity(mVelocity);

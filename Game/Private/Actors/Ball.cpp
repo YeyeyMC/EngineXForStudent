@@ -3,6 +3,8 @@
 #include "Game/Public/Components/CircleRenderComponent.h"
 #include "Game/Public/Components/CircleColliderComponent.h"
 #include "Game/Public/Utils.h"
+#include "Game/Public/Actors/Asteroid.h"
+#include "Game/Public/Actors/Score.h"
 
 
 Ball::Ball(float BallRadius, exColor BallColor)
@@ -21,12 +23,15 @@ void Ball::BeginPlay()
 
 	if (std::shared_ptr<CircleColliderComponent> CircleColliderComp = std::get<0>(ResultCircleCollider))
 	{
+		CircleColliderComp->SetIsTrigger(true);
+		CircleColliderComp->SetLayer("Bullet");
+
 		CollisionEventSignature CollisionDelegate = std::bind(&Ball::OnCollision, this, std::placeholders::_1, std::placeholders::_2);
 		CircleColliderComp->ListenForCollision(CollisionDelegate);
 	}
 }
 
-void Ball::OnCollision(std::weak_ptr<Actor>, const exVector2)
+void Ball::OnCollision(std::weak_ptr<Actor> other, const exVector2)
 {
 	if (std::shared_ptr<RenderComponent> RenderComp = GetComponentOfType<RenderComponent>())
 	{
@@ -37,6 +42,17 @@ void Ball::OnCollision(std::weak_ptr<Actor>, const exVector2)
 		Color.mColor[3] = 255;
 
 		RenderComp->SetColor(Color);
+	}
+
+	auto otherShared = other.lock();
+	if (!otherShared) return;
+
+	if (std::dynamic_pointer_cast<Asteroid>(otherShared))
+	{
+		if (auto score = Score::GetActive().lock())
+			score->AddScore(10);
+
+		return;
 	}
 }
 

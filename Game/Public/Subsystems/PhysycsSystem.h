@@ -23,7 +23,7 @@ public:
 	void ClearInvalidPhysicscomponent();
 
 	void PhysicsUpdate(const float DeltaTime);
-
+	bool ShouldCollide(const std::string& a, const std::string& b);
 	
 private:
 	PhysicsEngine();

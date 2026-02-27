@@ -23,6 +23,7 @@ void Player::BeginPlay()
 	AddComponentOfType<BulletSpawnerComponent>(0.5f, 10.0f);
 
 	// Adds the Circle Render Component to the player
+	//AddComponentOfType<CircleRenderComponent>(mColor, mRadius, false, false, true, "Player");
 	AddComponentOfType<CircleRenderComponent>(mColor, mRadius);
 
 	// Adds the Circle Collider Component to the player
@@ -30,6 +31,9 @@ void Player::BeginPlay()
 
 	if (std::shared_ptr<CircleColliderComponent> CircleColliderComp = std::get<0>(ResultCircleCollider))
 	{
+		CircleColliderComp->SetIsTrigger(true);
+		CircleColliderComp->SetLayer("Player");
+
 		CollisionEventSignature CollisionDelegate = std::bind(&Player::OnCollision, this, std::placeholders::_1, std::placeholders::_2);
 		CircleColliderComp->ListenForCollision(CollisionDelegate);
 	}

@@ -26,5 +26,10 @@ private:
     float mMaxX;
     float mSpawnY;
 
+    float mKillMinX = -100.0f;
+    float mKillMaxX = 1380.0f;
+    float mKillMinY = -100.0f;
+    float mKillMaxY = 820.0f;
+
     std::vector<std::shared_ptr<Asteroid>> mSpawned;
 };

@@ -15,9 +15,13 @@ public:
 	virtual void BeginPlay() override;
 	virtual void EndPlay() override;
 	virtual void Tick(const float DeltaSeconds) override;
+
+	bool IsDead() const { return mDead; }
+	void Kill() { mDead = true; }
 #pragma endregion
 
-	
+protected:
+	bool mDead = false;
 
 private:
 
