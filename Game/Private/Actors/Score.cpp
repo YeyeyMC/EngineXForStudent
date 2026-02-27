@@ -55,6 +55,11 @@ void Score::SetScoreText(const std::string& ScoreText)
 	if (mTextComponent) mTextComponent->SetText(ScoreText);
 }
 
+int Score::GetScoreText()
+{
+	if (mTextComponent) return mScore;
+}
+
 void Score::AddScore(int points)
 {
 	mScore += points;

@@ -23,7 +23,6 @@ void AsteroidSpawner::Tick(const float DeltaSeconds)
 {
     Actor::Tick(DeltaSeconds);
 
-    // 1) CLEANUP bounds
     mSpawned.erase(
         std::remove_if(mSpawned.begin(), mSpawned.end(),
             [this](const std::shared_ptr<Asteroid>& a)

@@ -18,7 +18,6 @@ void Asteroid::BeginPlay()
 
     AddComponentOfType<CircleRenderComponent>(mColor, mRadius);
 
-    //auto resultCollider = AddComponentOfType<CircleColliderComponent>(mRadius + 2.0f, false, false, true, "Asteroid");
     auto resultCollider = AddComponentOfType<CircleColliderComponent>(mRadius + 2.0f);
     if (std::shared_ptr<CircleColliderComponent> collider = std::get<0>(resultCollider))
     {
@@ -29,7 +28,6 @@ void Asteroid::BeginPlay()
         collider->ListenForCollision(collisionDelegate);
     }
 
-    //AddComponentOfType<PhysicsComponent>(exVector2(0.0f, 1.0f), false, false);
 }
 
 void Asteroid::Tick(const float DeltaSeconds)
@@ -67,5 +65,4 @@ void Asteroid::OnCollision(std::weak_ptr<Actor> other, const exVector2 hitLocati
         return;
     }
 
-    // Destroy();
 }

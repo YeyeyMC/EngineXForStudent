@@ -30,7 +30,6 @@ void BulletSpawnerComponent::Tick(const float DeltaTime)
 		if (const std::shared_ptr<TransformComponent> TransformComp = mOwner.lock()->GetComponentOfType<TransformComponent>()) 
 		{		
 			std::shared_ptr<Ball> newBullet = Actor::SpawnActorOfType<Ball>(exVector2(TransformComp->GetLocation().x, TransformComp->GetLocation().y - 50), bulletRadius, Color);
-			//newBullet->GetComponentOfType<PhysicsComponent>()->SetLayer("Bullet");
 			if (std::shared_ptr<PhysicsComponent> BulletPhysicsformComp = newBullet->GetComponentOfType<PhysicsComponent>())
 			{
 				BulletPhysicsformComp->SetVelocity(mVelocity);
@@ -42,8 +41,9 @@ void BulletSpawnerComponent::Tick(const float DeltaTime)
 	 auto it = std::remove_if(mBullets.begin(), mBullets.end(),
 	 	[](const std::shared_ptr<Ball>& b) {
 	 		if (!b) return true;
+	 		if (b->IsDead()) return true;
 	 		if (auto t = b->GetComponentOfType<TransformComponent>()) {
-	 			return t->GetLocation().y < -1000.0f; // criterio de eliminación
+	 			return t->GetLocation().y < -1000.0f;
 	 		}
 	 		return false;
 	 	});

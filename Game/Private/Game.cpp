@@ -40,6 +40,13 @@ MyGame::~MyGame()
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
+void MyGame::ChangeState(GameState newState)
+{
+	if (mState == newState) return;
+	mState = newState;
+
+}
+
 
 void MyGame::Initialize( exEngineInterface* pEngine )
 {
@@ -63,6 +70,8 @@ void MyGame::Initialize( exEngineInterface* pEngine )
 
 	mScore = Actor::SpawnActorOfType<Score>(exVector2(50.0f, 50.0f), mFontID);
 	mAsteroidSpawner = Actor::SpawnActorOfType<AsteroidSpawner>(exVector2(0.0f, 0.0f), 0.7f, 14, 20.0f, 780.0f, -60.0f);
+
+	mState = GameState::Playing;
 }
 
 //-----------------------------------------------------------------
@@ -101,28 +110,72 @@ void MyGame::OnEventsConsumed()
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
-void MyGame::Run( float fDeltaT )
+
+void MyGame::Run(float fDeltaT)
 {
-	if (mInputSystem.IsMovingLeft() && !mInputSystem.IsMovingRight())
+	if (mState == GameState::Playing)
 	{
-		mPlayer->MoveLeft();
-	}
-	else if (mInputSystem.IsMovingRight() && !mInputSystem.IsMovingLeft())
-	{
-		mPlayer->MoveRight();
+		if (mInputSystem.IsMovingLeft() && !mInputSystem.IsMovingRight())
+		{
+			mPlayer->MoveLeft();
+		}
+		else if (mInputSystem.IsMovingRight() && !mInputSystem.IsMovingLeft())
+		{
+			mPlayer->MoveRight();
+		}
+		else
+		{
+			mPlayer->StopMoving();
+		}
+
+		if (mInputSystem.IsShootingPressed())
+		{
+
+		}
+
+		PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);
+		RENDER_ENGINE.RenderUpdate(mEngine);
+		TICK_ENGINE.TickUpdate(fDeltaT);
+
+
+		if (mScore)
+		{
+			exVector2 posSubheader(250.0f, 300.0f);
+			if (mScore->GetScoreText() == 100)
+			{
+				ChangeState(GameState::Win);
+				return;
+			}
+		}
+
+		if (mPlayer)
+		{
+			if (mPlayer->IsDead())
+			{
+				ChangeState(GameState::Lose);
+				return;
+			}
+		}
 	}
 	else
 	{
-		mPlayer->StopMoving();
-	}
+		exColor textColor;
+		textColor.mColor[0] = 255;
+		textColor.mColor[1] = 255;
+		textColor.mColor[2] = 255;
+		textColor.mColor[3] = 255;
 
-	// @TODO: Implement shoot when IsShootingPressed() returns true
-	if (mInputSystem.IsShootingPressed())
-	{
+		const char* message = (mState == GameState::Win) ? "YOU WIN!" : "GAME OVER";
+		exVector2 posHearer(300.0f, 250.0f);
+		exVector2 posSubheader(250.0f, 300.0f);
+		mEngine->DrawText(mFontID, posHearer, message, textColor, 100);
+		mEngine->DrawText(mFontID, posSubheader, "Press R to restart", textColor, 100);
+		
+		if (mInputSystem.IsRestartPressed()) 
+		{
+
+			Initialize(mEngine); // Reiniciar el juego
+		}
 		
 	}
-
-	PHYSICS_ENGINE.PhysicsUpdate(fDeltaT);
-	RENDER_ENGINE.RenderUpdate(mEngine);
-	TICK_ENGINE.TickUpdate(fDeltaT);
 }

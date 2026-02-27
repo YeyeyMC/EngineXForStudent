@@ -19,6 +19,7 @@ void InputSystem::Update()
 
 	mLeft = pState[SDL_SCANCODE_LEFT] || pState[SDL_SCANCODE_A];
 	mRight = pState[SDL_SCANCODE_RIGHT] || pState[SDL_SCANCODE_D];
+	mRestart = pState[SDL_SCANCODE_R];
 
 	// @TODO Implement shoot when the space key is pressed
 }
@@ -31,6 +32,10 @@ bool InputSystem::IsMovingLeft() const
 bool InputSystem::IsMovingRight() const
 {
 	return mRight;
+}
+bool InputSystem::IsRestartPressed() const
+{
+	return mRestart;
 }
 
 bool InputSystem::IsShootingPressed() const

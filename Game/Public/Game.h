@@ -51,4 +51,11 @@ private:
 	std::shared_ptr<Player>        mPlayer;
 	std::shared_ptr<Score>    mScore;
 	std::shared_ptr<AsteroidSpawner> mAsteroidSpawner;
+
+public:
+	enum class GameState { Playing, Win, Lose };
+private:
+	GameState mState{ GameState::Playing };
+
+	void ChangeState(GameState newState);
 };

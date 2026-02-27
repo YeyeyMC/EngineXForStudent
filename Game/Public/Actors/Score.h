@@ -16,6 +16,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void SetScoreText(const std::string& ScoreText);
+	int GetScoreText();
 	void AddScore(int points);
 
 	static std::weak_ptr<Score> GetActive();

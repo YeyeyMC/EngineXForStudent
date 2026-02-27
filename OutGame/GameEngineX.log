@@ -1,5 +1,14 @@
-﻿  TextComponent.cpp
-EngineXd.lib(Engine.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(Engine.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
-EngineXd.lib(RenderPacket.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(RenderPacket.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
-EngineXd.lib(System.obj) : warning LNK4099: PDB 'EngineX.pdb' was not found with 'EngineXd.lib(System.obj)' or at 'C:\Users\Public\Repos\EngineXForStudent\Build\EngineX.pdb'; linking object as if no debug info
-  GameEngineX.vcxproj -> C:\Users\Public\Repos\EngineXForStudent\Build\GameEngineXd.exe
+﻿  Asteroid.cpp
+  AsteroidSpawner.cpp
+  Player.cpp
+C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Public\Actor.h(53,69): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Game/Private/Actors/Player.cpp")
+      C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Public\Actor.h(53,69):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Game\Private\Actors\Player.cpp(26,92):
+          Vea la referencia a la creación de una instancia de la función plantilla "std::tuple<std::shared_ptr<CircleColliderComponent>,bool,String> Actor::AddComponentOfType<CircleColliderComponent,double>(double)" que se está compilando
+  
+  BulletSpawnerComponent.cpp
+  Game.cpp
+  Generando código...
+  GameEngineX.vcxproj -> C:\Users\felip\Documents\VFS\C++\SpaceShooter\SpaceShooterEngineX\Build\GameEngineXd.exe
